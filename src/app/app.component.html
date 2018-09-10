@@ -1,0 +1,44 @@
+<form [formGroup]="form" (ngSubmit)="sendInput()">
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInput">input</label>
+      <input type="text"
+        class="form-control mb-2"
+        id="inlineFormInput"        
+        formControlName="input"
+      />
+    </div>    
+    
+    <div class="col-auto">
+      <button type="submit"
+        class="btn btn-primary mb-2"
+        [disabled]="!form.valid">Send</button>
+    </div>
+  </div>
+
+  <div *ngIf="!form.get('input').valid && form.get('input').touched" class="form-row align-items-center">
+    <small class="form-text text-danger">Field required!</small>
+  </div>
+
+  <div *ngIf="outputTableItems?.length > 0" id="divOutput" class="form-row align-items-center">
+    <span id="spOutput">Output: </span>
+    <label id="lblOutput">{{ output }}</label>
+  </div>
+</form>
+
+<div *ngIf="outputTableItems?.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Input</th>
+        <th scope="col">Output</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let field of outputTableItems">
+        <td>{{ field.input }}</td>
+        <td>{{ field.output }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+* {
+    margin: 2px;
+}
+#spOutput {
+    font-weight: bold;
+}
+
+#divOutput {
+    margin: 40px 10px;
+    /*display: none;*/
+}
+
+small {
+    margin-left: 10px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid #FF0000;
+}
+
+input.ng-valid.ng-touched {
+    border: 1px solid #0000FF;
+}
