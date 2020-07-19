@@ -1,6 +1,6 @@
 <h1>GFT Challenge - Restaurant Order App</h1>
 <p>In this project, an Angular SPA was developed as a frontend solution to GFT Challenge - Restaurant Order App.</p>
-<p>This SPA consumes the API published <a href="https://github.com/cristofer-js19/repos-RestaurantOrderApi">here</a>.</p>
+<p>This SPA consumes the API published <a href="https://github.com/cristofer-js19/api">here</a>.</p>
 <p>The technology used was Angular 6, with the following dependencies:</p>
 <ul>
 	<li>Bootstrap</li>
